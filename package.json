@@ -1,0 +1,19 @@
+{
+  "name": "projector-ts",
+  "version": "1.0.0",
+  "description": "A simple CLI application that stores, deletes, or presents variables based on the current working directory or a path provided. Written in Typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/command-line-args": "^5.2.0",
+    "@types/node": "^20.1.2",
+    "command-line-args": "^5.2.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  }
+}
