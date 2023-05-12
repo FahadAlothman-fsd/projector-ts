@@ -10,6 +10,9 @@ dependencies:
   command-line-args:
     specifier: ^5.2.1
     version: 5.2.1
+  env-paths:
+    specifier: ^3.0.0
+    version: 3.0.0
   ts-node:
     specifier: ^10.9.1
     version: 10.9.1(@types/node@20.1.2)(typescript@5.0.4)
@@ -103,6 +106,11 @@ packages:
   /diff@4.0.2:
     resolution: {integrity: sha512-58lmxKSA4BNyLz+HHMUzlOEpg09FV+ev6ZMe3vJihgdxzgcwZ8VoEEPmALCZG9LmqfVoNMMKpttIYTVG6uDY7A==}
     engines: {node: '>=0.3.1'}
+    dev: false
+
+  /env-paths@3.0.0:
+    resolution: {integrity: sha512-dtJUTepzMW3Lm/NPxRf3wP4642UWhjL2sQxc+ym2YMj1m/H2zDNQOlezafzkHwn6sMstjHTwG6iQQsctDW/b1A==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dev: false
 
   /find-replace@3.0.0:
