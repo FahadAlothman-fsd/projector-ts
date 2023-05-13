@@ -4,16 +4,21 @@
   "description": "A simple CLI application that stores, deletes, or presents variables based on the current working directory or a path provided. Written in Typescript",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "command-line-args": "^5.2.1",
+    "env-paths": "^3.0.0"
+  },
+  "devDependencies": {
     "@types/command-line-args": "^5.2.0",
     "@types/node": "^20.1.2",
-    "command-line-args": "^5.2.1",
-    "env-paths": "^3.0.0",
+    "@types/jest": "^29.5.1",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.1.0",
     "ts-node": "^10.9.1",
     "typescript": "^5.0.4"
   }

@@ -22,9 +22,6 @@ function getOperation(opts: Opts): Operations {
       return Operations.Add;
     }
     case "rmv": {
-      if (opts.args.length !== 2) {
-        throw new Error("remove operation requires 1 argument");
-      }
       return Operations.Remove;
     }
     default: {
