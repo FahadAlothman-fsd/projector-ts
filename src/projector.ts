@@ -57,6 +57,7 @@ export default class Projector {
       dir = this.data.projector[this.config.pwd] = {};
       dir[key] = value;
     }
+    dir[key] = value;
   }
   removeValue(key: string): string {
     const dir = this.data.projector[this.config.pwd];
