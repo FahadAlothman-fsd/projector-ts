@@ -4,6 +4,7 @@ export enum Operations {
   Print,
   Add,
   Remove,
+  ConfigFile,
 }
 
 export type Config = {
@@ -23,6 +24,9 @@ function getOperation(opts: Opts): Operations {
     }
     case "rmv": {
       return Operations.Remove;
+    }
+    case "con": {
+      return Operations.ConfigFile;
     }
     default: {
       return Operations.Print;
@@ -56,6 +60,14 @@ function getArgs(opts: Opts): string[] {
       }
       return opts.args.slice(1);
     }
+    case Operations.ConfigFile: {
+      if (opts.args.length !== 1) {
+        throw new Error(
+          `expected 0 or 1 arguments but got ${opts.args.length - 1}`
+        );
+      }
+      return opts.args;
+    }
   }
 }
 
@@ -69,6 +81,7 @@ function getConfig(opts: Opts): string {
   }
   return path.join(home, "projector", "projector.json");
 }
+
 function getPwd(opts: Opts): string {
   if (opts.pwd) {
     return opts.pwd;

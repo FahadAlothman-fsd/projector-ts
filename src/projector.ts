@@ -1,4 +1,4 @@
-import { existsSync, readFileSync } from "fs";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "fs";
 import { Config } from "./config";
 import path from "path";
 
@@ -67,6 +67,13 @@ export default class Projector {
       delete dir[key];
     }
     return popped;
+  }
+  save() {
+    const configPath = path.dirname(this.config.config);
+    if (!existsSync(configPath)) {
+      mkdirSync(configPath, { recursive: true });
+    }
+    writeFileSync(this.config.config, JSON.stringify(this.data));
   }
   static fromConfig(config: Config): Projector {
     if (existsSync(config.config)) {
